@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  min-height: 100hv;
+  font-family: HelveticaNue;
+  color: #888888;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: HelveticaNue;
+  src: url(fonts/HelveticaNeue\ BlackCond.ttf);
+}
