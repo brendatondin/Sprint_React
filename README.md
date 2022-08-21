@@ -12,13 +12,13 @@ Sprint React do Modulo 5 da Resilia.
 1. Para clonar repositório:
 
     ```
-    git clone 
+    git clone https://github.com/brendatondin/Sprint_React.git
     ```
 
 2. Entrando na pasta:
 
      ```
-     cd 
+     cd todoreact
      ```
 
 3. Para instalar as dependências necessárias/todas as dependências :
