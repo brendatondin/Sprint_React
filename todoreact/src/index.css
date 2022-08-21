@@ -7,7 +7,7 @@
 body{
   width: 100%;
   min-height: 100hv;
-  font-family: HelveticaNue;
+  font-family: HelveticaNeue;
   color: #888888;
 }
 
@@ -16,6 +16,6 @@ button {
 }
 
 @font-face {
-  font-family: HelveticaNue;
-  src: url(fonts/HelveticaNeue\ BlackCond.ttf);
+  font-family: HelveticaNeue;
+  src: url(fonts/HelveticaNeue.ttf)
 }

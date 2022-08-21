@@ -37,8 +37,8 @@
     height: 350px;
     flex-direction: column;
     text-align: center;
-    margin-top: 11em;
-    /* font: normal normal normal 12px/18px Helvetica Neue; */
+    margin-top: 15em;
+    font: normal normal normal 12px/18px HelveticaNeue;
     letter-spacing: 0px;
     color: #fff;
     opacity: 1;
