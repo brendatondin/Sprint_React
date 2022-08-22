@@ -23,6 +23,8 @@
     width: 111px;
     height: 16px;
     margin-bottom: 10px;
+    font: normal normal bold 12px HelveticaNeue;
+
 
 }
 
@@ -42,7 +44,7 @@
     height: 14px;
     /* UI Properties */
     text-align: left;
-    font: normal normal normal 12px/16px Helvetica Neue;
+    font: normal normal normal 12px/16px HelveticaNeue;
     letter-spacing: 0px;
     color: #888888;
     opacity: 1;
