@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.firstSec{
+.SectionForm{
     width: 920px;
     display: flex;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     margin-top: 10px;
 }
 
-.secondSec{
+.SectionCards{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,19 +45,10 @@ hr{
     width: 260px;
     margin: 50px 0 100px 0;
 }
-
-/* .button:hover{
-    background-color: yellow;
-    transform: scale(1.1);
-} */
-
 .button:hover {
     --c:#888888;
-    /* the color */
     --b: .1em;
-    /* border length */
     --d: 20px;
-    /* the cube depth */
 
     --_s: calc(var(--d) + var(--b));
 

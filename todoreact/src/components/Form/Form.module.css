@@ -25,17 +25,18 @@
     transform: scale(1.1);
 }
 
-.campos{
+.camposInput{
     display: flex;
     flex-direction: column;
 }
 
-.campoRadio{
+.RadiomInput{
     width: 100%;
     display: flex;    
     align-items: center;
     justify-content: flex-start;
     gap: 30px;
+    margin: 10px 0 10px 0;
 }
 
 .radio{

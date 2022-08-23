@@ -14,19 +14,10 @@
     margin: 50px 0 71px;
 }
 
-/* .button:hover {
-    background-color: yellow;
-    transform: scale(1.1);
-} */
-
 .button:hover {
     --c:#888888;
-    /* the color */
     --b: .1em;
-    /* border length */
     --d: 20px;
-    /* the cube depth */
-
     --_s: calc(var(--d) + var(--b));
 
     color: var(--c);

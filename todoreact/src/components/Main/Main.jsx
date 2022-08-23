@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useEffect } from "react";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 import Form from '../Form/Form';
@@ -7,13 +8,33 @@ import Text from '../Text/Text';
 import S from './Main.module.css'
 
 const Main = () => {
+    const [informacoes, setInformacoes] = useState([]);
+    const [page, setPage] = useState(1)
+
+    async function handleRequisicao() {
+        const response = await fetch(
+            `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${page}`
+        );
+        const json = await response.json();
+        setInformacoes([...informacoes, ...json.products]);
+        console.log(informacoes)
+    }
+
+    const nextPage = () => {
+        setPage(page + 1)
+    }
+
+    useEffect(() => {
+        handleRequisicao();
+    }, [page]);
+
     return (
         <main className={S.main}>
-            <section className={S.firstSec}>
+            <section className={S.SectionForm}>
                 <Text />
-                <Form/>
+                <Form />
             </section>
-            <section className={S.secondSec}>
+            <section className={S.SectionCards}>
                 <div className={S.h3Line}>
                     <div>
                         <hr />
@@ -24,66 +45,25 @@ const Main = () => {
                     </div>
                 </div>
                 <div className={S.cards}>
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
-                    <Card
-                        nome="Nome do produto"
-                        desc="Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata."
-                        de="23,99"
-                        por="19,99"
-                        ou="9,99"
-                    />
+                    {informacoes.length > 0 &&
+                        informacoes.map((item, index) => {
+                            return (
+                                <Card
+                                    key={index}
+                                    img={item.image}
+                                    nome={item.name}
+                                    desc={item.description}
+                                    de={item.oldPrice}
+                                    por={item.price}
+                                    vezes={item.installments.count}
+                                    ou={item.installments.value}
+                                />
+                            );
+                        })}
                 </div>
-                <Button style={S.button} content="Adquira mais produtos aqui" />
+                <Button onClick={nextPage} style={S.button} content="Adquira mais produtos aqui" />
             </section>
-            <section className={S.thirdSec}>
+            <section className={S.SectionBottomForm}>
                 <div className={S.h3Line}>
                     <div>
                         <hr />

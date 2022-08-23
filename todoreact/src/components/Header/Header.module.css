@@ -9,30 +9,6 @@
     text-align: center;
 }
 
-/*
-.header {
-    background: #707070;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: #FFF;
-    gap: 40px;
-    padding: 40px 0;
-    box-sizing: border-box;
-    padding: 2em 3em 7em;
-}
-
-.separator {
-    height: 125px;
-    margin-top: calc(125px * -1);
-    background-image: linear-gradient(to bottom left, transparent, transparent 50%, #FFF 50%, #FFF);
-    transform: rotate(4deg) translateY(-150px) scale(1.5);
-}
-
-*/
-
 .p {
     font-size: 14px;
     margin-top: 20px;
@@ -63,7 +39,6 @@
     background-color: yellow;
     transform: scale(1.1);
 }
-
 
 .bdSet {
     position: absolute;
